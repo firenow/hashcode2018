@@ -16,12 +16,7 @@ public class Slice {
 
     @Override
     public String toString() {
-        return "Slice{" +
-                "row1=" + row1 +
-                ", row2=" + row2 +
-                ", column1=" + column1 +
-                ", column2=" + column2 +
-                '}';
+        return String.format("%s %s %s %s", row1, column1, row2, column2);
     }
 
 
