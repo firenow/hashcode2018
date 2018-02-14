@@ -1,16 +1,12 @@
 package main;
 
+import io.IoProblem;
+import model.Problem;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
-
-import algos.Greedy;
-import algos.HillClimbing;
-import io.IoProblem;
-import io.IoSolution;
-import model.Problem;
-import model.Solution;
 
 public class Main {
 	
@@ -23,11 +19,12 @@ public class Main {
 	
 			// Loading
 			System.out.println("... [MAIN] - Loading input data");
-			File problemFile = new File("resources", filename);
+			File problemFile = new File("src/resources", "medium.in");
+
 			Problem problem = IoProblem.load(problemFile);
 			
 			problem.print();
-			System.out.println("... [MAIN] - Ending");
+			/*System.out.println("... [MAIN] - Ending");
 	
 			
 			// Basic solving
@@ -37,18 +34,8 @@ public class Main {
 			sol = greedy.solve();
 	
 			
-			IoSolution.save(new File("resources/out"), sol);
-			/**
-			// Hill Climbing
-			System.out.println("... [MAIN] - Improving solution");
-			HillClimbing hc = new HillClimbing(sol);
-	
-			long MAX_RUN_TIME_MIN = 120;
-			HillClimbingTask hcTask = new HillClimbingTask(hc, MAX_RUN_TIME_MIN);
-			hcTask.run();
-	
-			System.out.println("... [MAIN] - Ending");
-			*/
+			IoSolution.save(new File("resources/out"), sol);*/
+
 		}
 	}
 

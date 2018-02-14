@@ -14,7 +14,7 @@ import model.Solution;
 public class IoSolution {
 
 	public static void save(File repertory, Solution sol) {
-		try {
+	/*	try {
 			File savedOutputFile = new File(repertory, getSolutionName(sol));
 			BufferedWriter bw = new BufferedWriter(new FileWriter(savedOutputFile));
 
@@ -37,11 +37,12 @@ public class IoSolution {
 		} catch (IOException e) {
 			System.out.println("... ERROR while saving file");
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	private static String getSolutionName(Solution sol) {
-		return sol.problem.name + "_" + sol.getScore() + ".txt";
+		//return sol.problem.name + "_" + sol.getScore() + ".txt";
+		return "";
 	}
 
 }
