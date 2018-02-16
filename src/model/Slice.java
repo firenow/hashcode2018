@@ -2,10 +2,10 @@ package model;
 
 public class Slice {
 
-    int row1;
-    int row2;
-    int column1;
-    int column2;
+    public int row1;
+    public int row2;
+    public int column1;
+    public int column2;
 
     public Slice(int row1, int row2, int column1, int column2) {
         this.row1 = row1;
