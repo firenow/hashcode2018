@@ -14,6 +14,22 @@ public class Slice {
         this.column2 = column2;
     }
 
+    public int getRow1() {
+        return row1;
+    }
+
+    public int getRow2() {
+        return row2;
+    }
+
+    public int getColumn1() {
+        return column1;
+    }
+
+    public int getColumn2() {
+        return column2;
+    }
+
     @Override
     public String toString() {
         return String.format("%s %s %s %s", row1, column1, row2, column2);
