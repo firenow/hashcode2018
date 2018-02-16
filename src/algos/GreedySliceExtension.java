@@ -78,12 +78,45 @@ public class GreedySliceExtension {
     if (potentialSlice.getColumn2() > solution.problem.getColumnNumber()
         && potentialSlice.getRow2() > solution.problem.getRowNumber()) {
       return false;
+    } else if (isOverlappingSlices(potentialSlice)) {
+      return false;
     }
     // TODO : check each point (row, col) is not between (row1 - row2 && col1, col2)
 
     return true;
   }
 
+  /**
+   * 
+   */
+  private boolean isOverlappingSlices(Slice potentialSlice) {
+    //
+    for (Slice slice : this.solution.slices) {
+      // 4 cases
+      if (potentialSlice.getRow1() > slice.getRow1() && potentialSlice.getRow1() < slice.getRow2()
+          && potentialSlice.getColumn1() > slice.getColumn1()
+          && potentialSlice.getColumn1() > slice.getColumn2()) {
+        return true;
+      } else if (potentialSlice.getRow1() > slice.getRow1()
+          && potentialSlice.getRow1() < slice.getRow2()
+          && potentialSlice.getColumn2() > slice.getColumn1()
+          && potentialSlice.getColumn2() > slice.getColumn2()) {
+        return true;
+      } else if (potentialSlice.getRow2() > slice.getRow1()
+          && potentialSlice.getRow2() < slice.getRow2()
+          && potentialSlice.getColumn1() > slice.getColumn1()
+          && potentialSlice.getColumn1() > slice.getColumn2()) {
+        return true;
+      } else if (potentialSlice.getRow2() > slice.getRow1()
+          && potentialSlice.getRow2() < slice.getRow2()
+          && potentialSlice.getColumn2() > slice.getColumn1()
+          && potentialSlice.getColumn2() > slice.getColumn2()) {
+        return true;
+      }
+    }
+
+    return false;
+  }
 
   /**
    * 
