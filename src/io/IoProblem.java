@@ -29,7 +29,7 @@ public class IoProblem {
 		problem.setRowNumber(Integer.valueOf(params[0]));
 		problem.setColumnNumber(Integer.valueOf(params[1]));
 		problem.setMinEachIngredientPerSlice(Integer.valueOf(params[2]));
-		problem.setMaxtotalIngredientsPerSlice(Integer.valueOf(params[2]));
+		problem.setMaxtotalIngredientsPerSlice(Integer.valueOf(params[3]));
 
 		boolean[][] tableau = new boolean[problem.getRowNumber()][problem.getColumnNumber()];
 
