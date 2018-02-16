@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
+
+import algos.AlgoNaifCommeThierry;
 import io.IoProblem;
 import io.IoSolution;
 import model.Problem;
@@ -26,6 +28,9 @@ public class Main {
 
     problem.print();
     Solution sol = new Solution(problem);
+
+    AlgoNaifCommeThierry algoNaifCommeThierry = new AlgoNaifCommeThierry(sol);
+
     // sol = greedy.solve();
     IoSolution.save(new File("src/resources/out"), sol);
 

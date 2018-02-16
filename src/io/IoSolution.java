@@ -14,7 +14,7 @@ public class IoSolution {
       File savedOutputFile = new File(repertory, getSolutionName(sol));
       BufferedWriter bw = new BufferedWriter(new FileWriter(savedOutputFile));
 
-      bw.write(sol.slices.size());
+      bw.write(String.valueOf(sol.slices.size()));
       bw.newLine();
 
       //
